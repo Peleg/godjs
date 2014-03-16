@@ -4,14 +4,13 @@ var exec     = require('child_process').exec,
     Watcher  = require('./lib/watcher').Watcher,
 
     pathToTasks = process.argv[process.argv.length - 1],
-    cmd = "ps aux | grep " + __filename + " | grep -v grep",
+    cmd = "ps aux | grep god.js | grep -vE 'grep|" + process.pid + "' | awk '{print $2}'",
     watcher;
-
+    
 // Gracefully shut down if there is already an instance of Godjs running
 exec(cmd, function (err, stdout, stderr) {
   if (stdout) {
-    console.log('Looks like Godjs is already running. Exitting.');
-    process.exit(0);
+    console.log('Looks like Godjs is already running (PID:' + stdout.trim()  + '). Exitting.');
   } else {
     setUpExitHandler();
     watcher = new Watcher(pathToTasks);
