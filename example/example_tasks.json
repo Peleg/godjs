@@ -1,8 +1,8 @@
 [
   {
     "name"    : "example script",
-    "start"   : 2300,
-    "stop"    : 2400,
+    "start"   : "2300",
+    "stop"    : "2330",
     "path"    : "./example/example_script.js",
     "args"    : [],
     "logPath" : "./example/example_log.log"

@@ -1,4 +1,4 @@
-#! /usr/local/bin/node
+#!/usr/local/bin/node
 
 var exec     = require('child_process').exec,
     Watcher  = require('./lib/watcher').Watcher,
