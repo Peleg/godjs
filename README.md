@@ -6,6 +6,8 @@ Godjs overlooks your node processes and starts/stops them on set times every day
 The idea came from the more impressive rubygem, [God] (https://github.com/mojombo/god).
 But since I didn't need much of its functionality and also wanted to learn node.js in the process, I decided to build my own, leaner version of God.
 
+[![Code Climate](https://codeclimate.com/github/PelegR/godjs/badges/gpa.svg)](https://codeclimate.com/github/PelegR/godjs)
+
 Install
 =======
 
